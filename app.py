@@ -29,7 +29,7 @@ def read_json_file(filepath):
         return []
 
 
-@app.route('/topics', method='GET')
+@app.route('/topics', methods=['GET'])
 def get_topics():
     topics = read_json_file(TOPICS_FILE)
     return jsonify(topics)
