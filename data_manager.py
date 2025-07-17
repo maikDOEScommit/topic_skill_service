@@ -25,9 +25,8 @@ class JsonDataManager:
 
 
     def write_data(self, filepath, data):
-
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)  # Sicherstellen, dass das Verzeichnis existiert
-
+        
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
         try:
             with open(filepath, 'w', encoding='utf-8') as file:
@@ -36,9 +35,3 @@ class JsonDataManager:
         except Exception as e:
             print(f"Ein unerwarteter Fehler ist aufgetreten beim Schreiben von {filepath}: {e}")
             return False
-
-
-
-
-
-
